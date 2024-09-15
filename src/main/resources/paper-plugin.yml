@@ -1,0 +1,4 @@
+name: IgnitionCore
+version: '${project.version}'
+main: dev.conc1erge.projectphoenix.IgnitionCore
+api-version: '1.21'
