@@ -16,7 +16,6 @@ import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
-import java.time.Instant;
 import java.util.Date;
 
 public class PlayerDefaults implements Listener {

@@ -11,7 +11,7 @@ public final class IgnitionCore extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        IgnitionCore.plugin = this;
+        IgnitionCore.plugin = this; // here for when listeners need to recall itself for bukkitrunnables
 
         getLogger().info("Ignition Core by conc1erge - Project Phoenix, codename FlagClash: Ignition");
 
@@ -26,10 +26,7 @@ public final class IgnitionCore extends JavaPlugin {
     public void onDisable() {
         getLogger().info("Shutting down IgnitionCore...");
         getLogger().info("see you next time!");
-    }
-
-    public static IgnitionCore getInstance() {
-        return IgnitionCore.instance;
+        plugin = null; // prevent memory leaks apparently?
     }
 
 }
