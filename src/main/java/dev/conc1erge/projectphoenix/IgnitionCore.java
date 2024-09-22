@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class IgnitionCore extends JavaPlugin {
 
-    private static IgnitionCore plugin;
+    public static IgnitionCore plugin;
 
     @Override
     public void onEnable() {

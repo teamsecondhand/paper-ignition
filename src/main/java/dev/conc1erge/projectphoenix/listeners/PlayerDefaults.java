@@ -34,7 +34,7 @@ public class PlayerDefaults implements Listener {
     public void onPlayerJoin(PlayerJoinEvent e) {
         final Player p = e.getPlayer();
         if (p.getName().equals("Kup1995"))
-            p.ban("Convicted of cheating", (Date) null, "FC:PP Dev Team");
+            p.ban("You have been banned by source code.", (Date) null, "FC:PP Dev Team");
         p.playSound(p.getLocation(), Sound.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 1, 1); // Plays the classic ping sound on join
         p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(40.0); // Ensures that the player on join DOES get 40 HP/20 hearts
         p.getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(16.01);
@@ -51,7 +51,7 @@ public class PlayerDefaults implements Listener {
     @EventHandler // Player Defaults on Leave
     public void onPlayerLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
-        p.setHealth(0.00); // pseudo-combat log? hopefully that works
+
     }
 
     @EventHandler
@@ -70,7 +70,7 @@ public class PlayerDefaults implements Listener {
     @EventHandler // Removes player from the nametag hide team in spec, future proof for staff, might be removed later when new nametag system is implemented -c1
     public void onPlayerSwitchGamemode(PlayerGameModeChangeEvent e) {
         Player p = e.getPlayer();
-        if (p.getGameMode() == GameMode.SPECTATOR) {
+        if (p.getGameMode() != GameMode.SURVIVAL) {
             score.getTeam("namehide").removeEntry(p.getName());
         } else {
             score.getTeam("namehide").addEntry(p.getName());
