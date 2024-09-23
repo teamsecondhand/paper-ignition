@@ -33,12 +33,12 @@ public class PlayerDefaults implements Listener {
     @EventHandler // Player Defaults on Join
     public void onPlayerJoin(PlayerJoinEvent e) {
         final Player p = e.getPlayer();
-        if (p.getName().equals("Kup1995"))
+        if (p.getUniqueId().equals("a1ce5c43-55ca-4ada-a605-cb6bc7928994"))
             p.ban("You have been banned by source code.", (Date) null, "FC:PP Dev Team");
         p.playSound(p.getLocation(), Sound.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 1, 1); // Plays the classic ping sound on join
         p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(40.0); // Ensures that the player on join DOES get 40 HP/20 hearts
-        p.getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(16.01);
-        p.getAttribute(Attribute.PLAYER_SWEEPING_DAMAGE_RATIO).setBaseValue(0.2);
+        p.getAttribute(Attribute.GENERIC_ATTACK_SPEED).setBaseValue(16);
+        p.getAttribute(Attribute.PLAYER_SWEEPING_DAMAGE_RATIO).setBaseValue(0.1);
 
         if (p.hasPlayedBefore()) {
             p.setGameMode(GameMode.SPECTATOR);
