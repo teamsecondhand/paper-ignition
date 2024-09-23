@@ -6,7 +6,7 @@
 
     <groupId>dev.conc1erge</groupId>
     <artifactId>Project-Phoenix</artifactId>
-    <version>1.4-PREDEV</version>
+    <version>1.5-PREDEV</version>
     <packaging>jar</packaging>
 
     <name>IgnitionCore</name>
