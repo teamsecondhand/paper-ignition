@@ -1,5 +1,6 @@
 package dev.conc1erge.projectphoenix;
 
+import dev.conc1erge.projectphoenix.listeners.GameplayListeners;
 import dev.conc1erge.projectphoenix.listeners.PlayerDefaults;
 import dev.conc1erge.projectphoenix.listeners.WorldDefaults;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,9 @@ public final class IgnitionCore extends JavaPlugin {
 
         // Persistent World Stuff
         getServer().getPluginManager().registerEvents(new WorldDefaults(), this);
+
+        // Persistent Gameplay Stuff
+        getServer().getPluginManager().registerEvents(new GameplayListeners(), this);
     }
 
     @Override

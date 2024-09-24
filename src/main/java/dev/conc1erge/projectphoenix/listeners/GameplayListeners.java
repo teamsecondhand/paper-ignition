@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class GameplayListeners implements Listener {
+    // Combat Logging Checker
 
     static int combatLogTime = 15;
     // set this value to how long the combat log is in seconds
 
-    // Combat Logging Checker
     public static class combatCheck {
         private static HashMap<UUID, combatTimer> Timer = new HashMap<UUID, combatTimer>();
 
